@@ -103,7 +103,7 @@ public class Paciente {
     }
     
         public void cadastrarUsuario(){           
-      String sql= "Insert into paciente(codigo,nome,endereco,complemento,rg,cpf,dataN)values "+
+      String sql= "Insert into paciente(codigo,nome,endereco,complemento,rg,cpf,data_nasc)values "+
                 "("+ this.getCodigoPaciente()+" ,'"+ this.getNomePaciente()+"','"+this.getEndereco()+"','"+this.getComplemento()+"','"+ this.getRg()+"','"+ this.getCpf() +"','"+ this.getData() +"')";
         con.executeSQL(sql);
         JOptionPane.showMessageDialog(null, "Registrado com sucesso");     
@@ -128,7 +128,7 @@ public class Paciente {
     public void alterar(){
         String sql;
         sql="Update paciente set nome='"+ getNomePaciente()+"',endereco='"+getEndereco()+"',complemento='"+getComplemento()+"', rg='"+getRg()+"', cpf= '"+getCpf()+
-                "', dataN='"+getData()+ "'where codigo="+ getCodigoPaciente();
+                "', data_nasc='"+getData()+ "'where codigo="+ getCodigoPaciente();
         con.executeSQL(sql);
         JOptionPane.showMessageDialog(null, "Registro alterado com sucesso...");
         
